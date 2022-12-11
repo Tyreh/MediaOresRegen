@@ -83,6 +83,22 @@ public final class MediaOres extends JavaPlugin {
 
     @Override
     public void onDisable() {
+
+        Iterator<TimedBlock> timedBlockIterator = timedBlocks.iterator();
+        int restoredBlocks = 0;
+
+        int maxBlocksPerTick = 2;
+        while (timedBlockIterator.hasNext() && restoredBlocks < maxBlocksPerTick) {
+            TimedBlock blockData = timedBlockIterator.next();
+            restoredBlocks++;
+            Block block = blockData.getBlockLocation().getBlock();
+            BlockState state = block.getState();
+            state.setType(blockData.getBlockType());
+            state.update(true);
+            timedBlockIterator.remove();
+        }
+
+
         Bukkit.getConsoleSender().sendMessage(ChatUtil.colorizeMessage(" "));
         Bukkit.getConsoleSender().sendMessage(ChatUtil.colorizeMessage(" "));
         Bukkit.getConsoleSender().sendMessage(ChatUtil.colorizeMessage("    &a&lMediaOresRegen &7- &fv") + this.getDescription().getVersion() + "(Tyreh #5006)");
