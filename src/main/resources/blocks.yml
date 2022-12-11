@@ -28,8 +28,15 @@ blocks:
       money: 50
       experience: 15
       commands: []
+  COPPER_ORE:
+    regen-delay: 30
+    give-drop: true
+    rewards:
+      money: 50
+      experience: 15
+      commands: []
   GOLD_ORE:
-    regen-delay: 10
+    regen-delay: 45
     give-drop: true
     rewards:
       money: 70
