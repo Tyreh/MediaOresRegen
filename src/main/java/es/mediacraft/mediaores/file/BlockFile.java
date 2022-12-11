@@ -36,18 +36,18 @@ public class BlockFile extends AbstractFile {
     }
 
     public void giveMoneyReward(Player p, String blockNode) {
-        double amount = getDouble("blocks." + blockNode + ".money");
+        double amount = getDouble("blocks." + blockNode + ".rewards.money");
         if (amount > 0) {
             plugin.getVaultEconomy().depositPlayer(p, amount);
-            p.sendMessage(plugin.getFileService().getMessagesFile().getMessage("money-reward"));
+            p.sendMessage(plugin.getFileService().getMessagesFile().getMessage("money-reward").replace("%amount%", String.valueOf(amount)));
         }
     }
 
     public void giveExpReward(Player p, String blockNode) {
-        float amount = (float) getDouble("blocks." + blockNode + ".experience");
+        int amount = getInt("blocks." + blockNode + ".rewards.experience");
         if (amount > 0) {
-            p.setExp(p.getExp() + amount);
-            p.sendMessage(plugin.getFileService().getMessagesFile().getMessage("experience-reward"));
+            p.giveExp(amount);
+            p.sendMessage(plugin.getFileService().getMessagesFile().getMessage("experience-reward").replace("%amount%", String.valueOf(amount)));
         }
     }
 
