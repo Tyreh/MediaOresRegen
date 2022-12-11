@@ -1,0 +1,9 @@
+############################################################
+# +------------------------------------------------------+ #
+# |                  Plugin Messages                     | #
+# +------------------------------------------------------+ #
+############################################################
+
+bypass-warning: "&d&l[MediaOresRegen] &c¡Cuidado! Estás sobrepasando la regeneración de bloques."
+money-reward: "&6&l+ &6%amount% &f⛁"
+experience-reward: "&b&l+ &b%amount% &fEXP"

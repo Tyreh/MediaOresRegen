@@ -1,0 +1,7 @@
+name: MediaOresRegen
+version: '${project.version}'
+main: es.mediacraft.mediaores.MediaOres
+api-version: 1.19
+loadbefore: [ WorldGuard, Vault ]
+depend: [ WorldGuard, Vault ]
+authors: [ Tyreh ]

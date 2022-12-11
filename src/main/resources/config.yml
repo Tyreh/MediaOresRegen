@@ -1,0 +1,16 @@
+############################################################
+# +------------------------------------------------------+ #
+# |               MediaOres - Tyreh #5006                | #
+# +------------------------------------------------------+ #
+############################################################
+
+# Bypass ore regeneration permission.
+bypass-permission: 'mediaores.bypass.regeneration'
+
+# The block to be replaced after breaking the ore.
+replace-block-material: 'COBBLESTONE'
+
+# World name and regions where minerals can be broken.
+regions:
+  world:
+    - 'mina'

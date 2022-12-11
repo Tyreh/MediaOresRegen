@@ -1,0 +1,65 @@
+############################################################
+# +------------------------------------------------------+ #
+# |                   Blocks to Regen                    | #
+# +------------------------------------------------------+ #
+############################################################
+
+# Blocks that can be broken and regenerated after the specified time in seconds.
+# In command reward section you can use %player% placeholder.
+blocks:
+  STONE:
+    regen-delay: 5
+    give-drop: true
+    rewards:
+      money: 5
+      experience: 5
+      commands: []
+  COAL_ORE:
+    regen-delay: 15
+    give-drop: true
+    rewards:
+      money: 30
+      experience: 10
+      commands: []
+  IRON_ORE:
+    regen-delay: 15
+    give-drop: true
+    rewards:
+      money: 50
+      experience: 15
+      commands: []
+  GOLD_ORE:
+    regen-delay: 10
+    give-drop: true
+    rewards:
+      money: 70
+      experience: 25
+      commands: []
+  LAPIS_ORE:
+    regen-delay: 80
+    give-drop: true
+    rewards:
+      money: 10
+      experience: 50
+      commands: []
+  REDSTONE_ORE:
+    regen-delay: 30
+    give-drop: true
+    rewards:
+      money: 80
+      experience: 50
+      commands: []
+  DIAMOND_ORE:
+    regen-delay: 120
+    give-drop: true
+    rewards:
+      money: 100
+      experience: 80
+      commands: []
+  EMERALD_ORE:
+    regen-delay: 160
+    give-drop: true
+    rewards:
+      money: 200
+      experience: 120
+      commands: []
